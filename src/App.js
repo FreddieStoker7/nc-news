@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import AllArticles from "./components/AllArticles";
+import AllTopics from "./components/AllTopics";
+import "./App.css";
+import AllArticlesByTopic from "./components/AllArticlesByTopic";
+import IndividualArticleInFull from "./components/IndividualArticleInFull";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <div className="navbar">
+            <Link to="/"  className="homebtn">Home</Link>
+            <div className="dropdown">
+          <button className="dropbtn">
+            <Link to="/topics">Topics</Link>
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div className="dropdown-content">
+            <Link to="/topics/football">Football</Link>
+            <Link to="/topics/coding">Coding</Link>
+            <Link to="/topics/cooking">Cooking</Link>
+          </div>
+         
+        </div>
+      </div>
+      <Routes>
+        <Route path="/" element={<AllArticles />} />
+        <Route path="/topics" element={<AllTopics />} />
+        <Route path="/topics/:topic" element={<AllArticlesByTopic />} />
+        <Route path="/articles/:article_id" element={<IndividualArticleInFull />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

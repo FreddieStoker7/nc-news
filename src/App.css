@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -28,11 +29,124 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  display: inline-block;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  height: 114.5px;
+  width: 232px
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+  
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 232px;
+  
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+ 
+}
+
+h1 { 
+  color: #b3b3b3;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 70px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: left; 
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+h2 { color: #cccccc;
+   font-family: 'Open Sans', sans-serif; 
+   font-size: 30px; 
+   font-weight: 300; 
+   line-height: 32px;
+    margin: 0 0 20px; 
+    text-align: left; 
+    margin-left: 80px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.article-card {
+  background-color: paleturquoise;
+  margin: 10px;
+  padding:1em;
+}
+
+a.homebtn {
+  width: 200px;
+  height:74.5px;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  
+  
+}
+html {
+  background-color: #1a1a1a;
+
 }
