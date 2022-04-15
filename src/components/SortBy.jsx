@@ -23,7 +23,7 @@ setSortBy(sortByQuery)
 
 
   return (
-    <div>
+    <div className='sort-by-div-all'>
        <div className="select-dropdown"> 
        <select name="sort-by" onChange={(e) => setSortBy(e.target.value)}>
        <option selected disabled>Sort by:</option>
@@ -45,10 +45,13 @@ setSortBy(sortByQuery)
       </select>
       </div>
     
+    
+
       <button className="button-19" value="asc" onClick={(e) => setOrderBy(e.target.value)}>
         Ascending
       </button>
       <button className="button-19" value="" onClick={(e) => setOrderBy(e.target.value)}>Descending</button>
+      
 
 
       

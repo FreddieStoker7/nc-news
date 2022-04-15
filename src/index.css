@@ -59,6 +59,7 @@ h2 {
 
 p {
   color: #b3b3b3;
+  font-size: 0.8rem;
 }
 
 h2,
@@ -291,14 +292,14 @@ h5 {
   cursor: pointer;
   display: inline-block;
   font-family: din-round,sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: .8px;
   line-height: 20px;
-  margin: 0;
+  margin: 5px;
   outline: none;
   overflow: visible;
-  padding: 13px 16px;
+  padding: 0px;
   text-align: center;
   text-transform: uppercase;
   touch-action: manipulation;
@@ -309,6 +310,7 @@ h5 {
   vertical-align: middle;
   white-space: nowrap;
   width: 50%;
+  
   
 }
 
@@ -451,10 +453,10 @@ h5 {
   justify-content: center;
   line-height: 24px;
   margin: 0;
-  min-height: 64px;
+  min-height: 30px;
   outline: none;
   overflow: visible;
-  padding: 19px 26px;
+  padding: 5px 15px;
   pointer-events: auto;
   position: relative;
   text-align: center;
@@ -533,3 +535,43 @@ h5 {
   opacity: .24;
 }
 
+.sort-by-div-all {
+  margin:25px;
+  display: flex;
+  max-height: 35px
+}
+
+#logged-in-user {
+  margin: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+#specific-logged-in-user {
+  color: rgb(76, 4, 170);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+#article-card-title {
+  margin: 25px;
+  padding: 20px;
+  font-weight: 1.85rem;
+}
+
+#comment-author {
+  font-weight: 1.85rem;
+  font-size: 1.2rem;
+  color: rgb(235, 232, 232);
+  margin: 0px;
+
+}
+
+#comment-body {
+  color: #c4c2c2;
+  margin-bottom: 30px;
+}
+#votes-number {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: aquamarine;
+}

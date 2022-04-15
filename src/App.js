@@ -27,7 +27,7 @@ function App() {
     <BrowserRouter>
     <UserContext.Provider value={{ singleUser, setSingleUser }}>
       <Header />
-      <p>logged in as: {singleUser}</p>
+      <p id="logged-in-user">logged in as: <span id="specific-logged-in-user">{singleUser}</span></p>
       <NavBar allUsers={allUsers} setSingleUser={setSingleUser}/>
       <Routes>
         <Route path="/" element={<AllArticles />} />

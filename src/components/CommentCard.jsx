@@ -17,11 +17,11 @@ export default function CommentCard({ comment, article_id}) {
 
   return (
     <div className="comment-card" key={comment.comment_id}>
-      <h5>{comment.author}</h5>
+      <h5 id="comment-author">{comment.author}</h5>
       <time style={{ textDecoration: 'none',
         color: '#807f7fee'}}>{date.toUTCString()}</time>
-      <p>{comment.body}</p>
-      <p>votes {comment.votes}</p>
+      <p id="comment-body">{comment.body}</p>
+      <p>votes: <span id="votes-number">{comment.votes}</span></p>
       {!isPending && <button className='button-77'onClick={handleClick}>Delete Comment</button>}
       {isPending && <button disabled>Deleting Comment...</button>}
     </div>

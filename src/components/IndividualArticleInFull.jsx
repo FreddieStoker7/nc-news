@@ -4,18 +4,27 @@ import { useParams } from "react-router-dom";
 import Votes from './Votes.jsx'
 import CommentCard from './CommentCard'
 import AddComment from "./AddComment";
+import ErrorPage from "./ErrorPage";
 
 export default function IndividualArticleInFull () {
 
 const [individualArticle, setIndividualArticle] = useState([])
 const {article_id} = useParams()
 const [allComments, setAllComments] = useState([])
+const [loading, setIsLoading] = useState(true)
+const [error, setError] =useState(null)
 
 
 
 useEffect(() => {
     fetchIndividualArticle(article_id).then((article) => {
+        setIsLoading(false)
         setIndividualArticle(article)
+        setError(null)
+        })
+        .catch(({ response: {data: { msg }, status }}) => {
+            setError({ status, msg });
+            setIsLoading(false);   
         })
     },[article_id])
 
@@ -25,7 +34,10 @@ useEffect(() => {
     })
 }, [allComments])
 
-    
+const date = new Date(Date.parse(individualArticle.created_at))
+
+if(loading) return <p>Loading...</p>
+if (error) return <ErrorPage error={error}/>
 
     return(
         <div>
@@ -33,7 +45,8 @@ useEffect(() => {
             <h2 className="article-title">{individualArticle.title}</h2>
             <h3>{individualArticle.topic}</h3>
             <h3>by: {individualArticle.author}</h3>
-            <p>{individualArticle.created_at}</p>
+            <time style={{ textDecoration: 'none',
+        color: '#807f7fee'}}>{date.toUTCString()}</time>
             <p>{individualArticle.body}</p>
             <Votes article={individualArticle}/>
             </div>

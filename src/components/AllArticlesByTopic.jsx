@@ -3,6 +3,7 @@ import { fetchAllArticles } from "../apiRequests/api";
 import ArticleCard from "./ArticleCard.jsx";
 import { useParams } from "react-router-dom";
 import SortByTopics from "./SortByTopics";
+import ErrorPage from "./ErrorPage";
 
 export default function AllArticlesByTopic() {
   const [allArticlesByTopic, setAllArticlesByTopic] = useState([]);
@@ -20,8 +21,9 @@ export default function AllArticlesByTopic() {
       setAllArticlesByTopic(articles);
       isLoading(false);
       setError(null)
-    }).catch((error) => {
-      
+    }).catch(({ response: {data: { msg }, status }}) => {
+      setError({ status, msg });
+      isLoading(false);
     })
   }, [topic, sortBy, orderBy]);
 
@@ -32,6 +34,12 @@ export default function AllArticlesByTopic() {
         <h3>Loading...</h3>
       </div>
     );
+    
+
+    if (error) return (
+    <ErrorPage error={error}/>
+    )
+
   return (
     <>
       <SortByTopics

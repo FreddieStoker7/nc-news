@@ -16,7 +16,7 @@ export default function SortByTopics ({allArticlesByTopic, setAllArticlesByTopic
 
 
   return (
-    <>
+    <div className="sort-by-div-all">
       <div class="select-dropdown">
       <select name="sort-by" onChange={(e) => setSortBy(e.target.value)}>
         <option value="created_at">Created at</option>
@@ -28,6 +28,6 @@ export default function SortByTopics ({allArticlesByTopic, setAllArticlesByTopic
       <button className="button-19" value="asc" onClick={(e) => setOrderBy(e.target.value)}>Ascending</button>
       <button className="button-19" value="desc" onClick={(e) => setOrderBy(e.target.value)}>Descending</button>
       
-    </>
+    </div>
   );
 }
