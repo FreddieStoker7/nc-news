@@ -20,24 +20,18 @@ The Hosted Version of this project can be found [here](https://thenewsatnorthcod
 
 ## Setup Instructions
 
-1) Clone from main page of the repo: 
+*** 1) Clone from main page of the repo: ***
 
 `$ git clone https://github.com/FreddieStoker7/nc-news`
 
-After running this it will ask you to enter your github username and password/access token.
 
-Finally to access the file in VS Code:
 
-Enter the Project file using:
-$ cd NC-Front-End-Project
-Then
-$ code .
-Install Dependencies:
+*** 2) Install Dependencies: ***
 After cloning, you will need to install the dependencies in your terminal to allow tests to be run by running.
 
-- $ npm install
-Running the App:
+`$ npm install`
+
+*** 3) Running the App: ***
 In order to view the current state of the App, and see live changes, you will need to run:
 
-- $ npm start
-Enjoy!
+`$ npm start`
