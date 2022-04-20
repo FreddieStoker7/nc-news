@@ -8,7 +8,6 @@ export default function CommentCard({ comment, article_id}) {
   const handleClick = () => {
       setIsPending(true)
     deleteComment(comment.comment_id).then((msg) => {
-      console.log(msg);
       setIsPending(false)
       navigate(`/articles/${article_id}`)
     });

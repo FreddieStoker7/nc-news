@@ -19,6 +19,6 @@ if (topic.slug === 'coding') return (
 
 
 {/* <article key={topic.slug}> 
-            <h2>{topic.slug}</h2>
+          <h2>{topic.slug}</h2>
             <h3>{topic.description}</h3>
-        </article> */}
+        </article> */}  

@@ -31,12 +31,9 @@ useEffect(() => {
 useEffect(() => {
     fetchArticleComments(article_id).then((comments) => {
         setAllComments(comments)
-        // setAllComments(allComments.sort((dateA, dateB) => dateA.created_at - dateB.created_at))
         })
-}, [allComments])
+}, [])
 
-
-// console.log(allComments)
 
 const date = new Date(Date.parse(individualArticle.created_at))
 
@@ -56,7 +53,7 @@ if (error) return <ErrorPage error={error}/>
             <p>{individualArticle.body}</p>
             <Votes article={individualArticle}/>
             </div>
-            <AddComment article_id={individualArticle.article_id}/>
+            <AddComment article_id={individualArticle.article_id} allComments={allComments} setAllComments={setAllComments}/>
             <section>
             {allComments.map((comment) => {
                 return (

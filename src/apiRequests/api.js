@@ -47,7 +47,6 @@ export const setNewComment = (article_id, newComment, username) => {
 }
 
 export const deleteComment = (comment_id) => {
-    console.log(comment_id)
     return myApi.delete(`/comments/${comment_id}`).then(() => {
         return "comment has been deleted"
     })

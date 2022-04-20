@@ -23,7 +23,6 @@ export default function AllArticles() {
     })
   }, [sortBy, orderBy]);
   
-  console.log(sortBy)
 
   if (loading) return <h3>Loading...</h3>;
   return (
