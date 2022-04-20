@@ -12,7 +12,6 @@ export default function AddComment (article_id) {
     const newComment = {comment}
     setIsPending(true)
     setNewComment(article_id, newComment, singleUser).then(() => {
-      console.log("new comment added")
     setIsPending(false)
     setComment("")
     })

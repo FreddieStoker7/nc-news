@@ -575,3 +575,7 @@ h5 {
   font-size: 1.5rem;
   color: aquamarine;
 }
+
+#article-votes {
+  float: right;
+}

@@ -31,10 +31,16 @@ useEffect(() => {
 useEffect(() => {
     fetchArticleComments(article_id).then((comments) => {
         setAllComments(comments)
-    })
+        // setAllComments(allComments.sort((dateA, dateB) => dateA.created_at - dateB.created_at))
+        })
 }, [allComments])
 
+
+// console.log(allComments)
+
 const date = new Date(Date.parse(individualArticle.created_at))
+
+
 
 if(loading) return <p>Loading...</p>
 if (error) return <ErrorPage error={error}/>

@@ -19,6 +19,7 @@ export default function SortByTopics ({allArticlesByTopic, setAllArticlesByTopic
     <div className="sort-by-div-all">
       <div class="select-dropdown">
       <select name="sort-by" onChange={(e) => setSortBy(e.target.value)}>
+      <option selected disabled>Sort by:</option>
         <option value="created_at">Created at</option>
         <option value="title">Title</option>
         <option value="votes">Votes</option>

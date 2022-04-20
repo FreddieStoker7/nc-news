@@ -11,6 +11,7 @@ export default function ArticleCard ({article}) {
             <h4>{article.author}</h4>
             <time style={{ textDecoration: 'none',
         color: '#807f7fee'}}>{date.toUTCString()}</time>
+        <span id="article-votes"><h3>votes {article.votes}</h3></span>
         </article>
         </Link>
         </div>
